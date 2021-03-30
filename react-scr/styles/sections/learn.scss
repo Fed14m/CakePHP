@@ -1,0 +1,131 @@
+.learnhero {
+  //padding-right: 135px;
+  padding: 150px 75px 80px;
+  @include media-breakpoint-down(lg) {
+    height: auto !important;
+  }
+  @media (max-width: 1050px) {
+    padding: 75px 75px 80px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 130px 27px 100px;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 4vmin;
+  }
+  .goto-button {
+    font-family: "Montserrat-SemiBold";
+    font-size: 1.25em;
+    border: 1px solid $border-color;
+    min-height: 25vh;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    margin: 10vh auto;
+    max-width: 195px;
+    cursor: pointer;
+
+    //animation
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+    //Shadow of colossus
+    @include box-shadow($graySiteBg 0px 14px 21px);
+
+    @media (max-width: $xlg) {
+      margin: 5vmax auto 1vh;
+      font-size: 1em;
+    }
+    @include media-breakpoint-down(md) {
+      margin: 3vh auto;
+    }
+    .icon-wrapper {
+      background-color: $learnIconBg;
+      width: 75px;
+      height: 75px;
+      border-radius: 37px;
+      margin: 3vmax auto 1vmax;
+      @media (max-width: $xlg) {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+      }
+      @include media-breakpoint-down(md) {
+        margin: 5vmax auto 4vmax;
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 5vmax auto 3vmax;
+      }
+      img {
+        margin-top: 17px;
+        max-width: 43px;
+        @media (max-width: $xlg) {
+          max-width: 33px;
+          margin-top: 19px;
+        }
+      }
+      .spl {
+        max-width: 25px;
+      }
+    }
+    span {
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+    //Hover, selection
+    &:hover, &.selected {
+      transform: translateY(-20px);
+      background-color: $usBlue;
+      color: white;
+      border-color: $usBlue;
+    }
+
+  }
+}
+
+.learn-data {
+  .feature-wrap {
+    h1 {
+      display: inline-block;
+    }
+    h3 {
+      font-family: "Montserrat-Bold";
+      color: $usBlue;
+    }
+    p {
+      height: auto;
+      max-height: inherit;
+      overflow: auto;
+    }
+    .back-button {
+      font-family: "Montserrat-SemiBold";
+      background-color: white;
+      border: 1px solid $borderGray;
+      height: 43px;
+      width: 125px;
+      margin-top: 2vh;
+      border-radius: 3px;
+      img {
+        margin-right: 8px;
+      }
+      @include media-breakpoint-down(md) {
+        float: right;
+        margin-top: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 113px;
+      }
+    }
+    .feature-block {
+      img {
+        max-width: 95%;
+      }
+    }
+    .last-block {
+      border-bottom: none;
+    }
+  }
+  .feature-image-wide {
+    margin-top: 5vh;
+  }
+}

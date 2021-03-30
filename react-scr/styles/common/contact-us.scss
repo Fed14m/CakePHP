@@ -1,0 +1,174 @@
+
+.container-contact-us {
+
+  background-color: $white;
+
+  @include containerMarginPadding();
+
+  //Custom padding/margin
+  padding: 125px 135px 20px;
+  @media (max-width: $xlg) {
+    padding: 69px 95px 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    padding: 75px 15px 20px;
+  }
+
+  .form-wrap {
+    margin-top: 65px;
+    margin-right: 25px;
+
+    @media (max-width: $xlg) {
+      margin-top: 45px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      margin-top: 7px;
+      margin-bottom: 27px;
+      @media (max-width: $xlg) {
+        font-size: 0.8em;
+      }
+    }
+
+    .contact-info-p {
+      margin-top: 25px;
+      margin-left: 3px;
+      font-family: "Montserrat-SemiBold";
+      @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    .frm-txt {
+      width: 96%;
+      height: 60px;
+      margin-bottom: 23px;
+      padding-left: 17px;
+      padding-right: 17px;
+
+      //Placeholder color
+      @include input-placeholder {
+        color: $hamburgerBlack;
+      }
+
+      border: 1px solid $gray500;
+      border-radius: 6px;
+
+      @media (max-width: $xlg) {
+        height: 40px;
+        font-size: 0.8em;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      &:focus {
+        outline: none !important;
+        border:1px solid $hamburgerBlack;
+      }
+
+      &.full-w {
+        width: 100%;
+      }
+
+      &.error {
+        border-color: red;
+        color: $red200;
+        @include input-placeholder {
+          color: $red200;
+        }
+      }
+    }
+
+    .call-to-action {
+      width: 100%;
+      border: 0;
+      background-color: $siteBlue;
+      height: 60px;
+      border-radius: 6px;
+      font-family: "Montserrat-SemiBold";
+      color: white;
+      &:hover {
+        background-color: $blue500;
+      }
+      @media (max-width: $xlg) {
+        height: 40px;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .quick-stat {
+    margin-top: 65px;
+    padding-top: 120px;
+    overflow: auto;
+
+    //Background hex img
+    background-image: url("../images/contact-us/hex-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (max-width: $xlg) {
+      margin-top: 45px;
+      padding-top: 15vh;
+    }
+
+    .bat-logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 125px;
+      @media (max-width: $xlg) {
+        max-width: 85px;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: $siteBlue;
+      margin-bottom: 0;
+      @media (max-width: $xlg) {
+        font-size: 1.85em;
+      }
+    }
+
+    h3 {
+      font-family: "Montserrat-Bold";
+      font-size: 1em;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 2vh;
+      @media (max-width: $xlg) {
+        font-size: 0.8em;
+      }
+    }
+
+    p {
+      text-align: center;
+      width: 70%;
+      max-width: 325px;
+      margin: 0 auto 20vh;
+
+      @media (max-width: $xlg) {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .error-msg {
+    position: absolute;
+    right: 14px;
+    bottom: 2px;
+    font-size: 0.9em;
+    color: $red200;
+    @media (max-width: $xlg) {
+      font-size: 0.7em;
+    }
+  }
+}

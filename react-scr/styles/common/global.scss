@@ -1,0 +1,92 @@
+body {
+  font-family:'Montserrat';
+  background-color: white;
+  font-size: 16px;
+}
+
+.container-fluid {
+  min-height: 700px;
+  scroll-snap-align: start;
+  @media (max-width: $xlg) {
+    scroll-snap-align: none;
+  }
+}
+
+.section-wrapper {
+  background-color: $siteWhite;
+  max-width: 1440px;
+  //margin-top: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 650px;
+  border-radius: 10px;
+  width:87%;
+  @include media-breakpoint-down(md) {
+    width:90%;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-family: 'Montserrat-Bold';
+  font-size: 3.125em;
+  line-height: 1.4em;
+
+  @media (max-width: $xlg) {
+    font-size: 2.3125em;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 2.0625em;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 2.0625em;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.6875em;
+  }
+}
+
+h3 {
+  font-family: 'Montserrat-SemiBold';
+  font-size: 1.25em;
+}
+
+p {
+  margin-top: 25px;
+  line-height: 2;
+}
+
+.text-h-block {
+}
+
+.home-root {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.site-loader {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  .bat-logo {
+    margin-top: 47vh;
+    max-width: 125px;
+    animation-name: pulsateBat;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes pulsateBat {
+  0% {transform: scale(1);}
+  12% {transform: scale(1.1);}
+  25% {transform: scale(1.2);}
+  37% {transform: scale(1.3);}
+  50% {transform: scale(1.5);}
+  62% {transform: scale(1.3);}
+  75% {transform: scale(1.2);}
+  87% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}

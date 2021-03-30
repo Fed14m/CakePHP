@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35.871" viewBox="0 0 40 35.871">
+  <g id="Group_77" data-name="Group 77" transform="translate(0 -26.424)">
+    <g id="Group_75" data-name="Group 75" transform="translate(0 26.424)">
+      <g id="Group_74" data-name="Group 74">
+        <path id="Path_55" data-name="Path 55" d="M257.052,26.6l-10.588,6.482V51.748l10.6,6.3a1.172,1.172,0,0,0,1.771-1.007V27.6a1.172,1.172,0,0,0-1.785-1Z" transform="translate(-227.209 -26.424)" fill="#0173c6"/>
+        <path id="Path_56" data-name="Path 56" d="M64.957,359.19l-.071,0a6.68,6.68,0,0,1-1.6-.3l-3.564,6.172a1.172,1.172,0,0,0,.442,1.608l3.509,1.968a1.172,1.172,0,0,0,1.589-.436l5.2-9.01Z" transform="translate(-54.908 -332.915)" fill="#0173c6"/>
+        <path id="Path_57" data-name="Path 57" d="M89.315,145.758h-6.79a4.191,4.191,0,0,1-3.985-4.117v-7.872a3.792,3.792,0,0,1,3.985-3.85h6.79Z" transform="translate(-72.404 -121.827)" fill="#80b9e2"/>
+        <path id="Path_58" data-name="Path 58" d="M3.791,171.641V163.77a6.3,6.3,0,0,1,.139-1.315h-1.7A2.226,2.226,0,0,0,0,164.681v6.05a2.226,2.226,0,0,0,2.226,2.226h1.7A6.335,6.335,0,0,1,3.791,171.641Z" transform="translate(0 -151.828)" fill="#0173c6"/>
+      </g>
+    </g>
+    <g id="Group_76" data-name="Group 76" transform="translate(33.238 33.112)">
+      <path id="Path_59" data-name="Path 59" d="M428.983,296.74a1.169,1.169,0,0,1-.829-.343l-2.365-2.364a1.172,1.172,0,1,1,1.658-1.657l2.365,2.364a1.172,1.172,0,0,1-.829,2Z" transform="translate(-425.446 -277.97)" fill="#80b9e2"/>
+      <path id="Path_60" data-name="Path 60" d="M426.617,116.739a1.172,1.172,0,0,1-.829-2l2.365-2.364a1.172,1.172,0,1,1,1.658,1.657l-2.365,2.364a1.169,1.169,0,0,1-.829.343Z" transform="translate(-425.445 -112.031)" fill="#80b9e2"/>
+      <path id="Path_61" data-name="Path 61" d="M443.7,219.5h-3.344a1.172,1.172,0,1,1,0-2.344H443.7a1.172,1.172,0,1,1,0,2.344Z" transform="translate(-438.11 -208.948)" fill="#80b9e2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg id="Group_79" data-name="Group 79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68.001" height="77" viewBox="0 0 68.001 77">
+  <defs>
+    <pattern id="pattern" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 136, 0)" viewBox="0 0 68 77">
+      <image preserveAspectRatio="none" width="68" height="77" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABNCAIAAACQflUtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB0SURBVGhD7c+xDYAADMCwwv8/l4UjospeMufZ3bni/XuCmSozVWaqzFSZqTJTZabKTJWZKjNVZqrMVJmpMlNlpspMlZkqM1VmqsxUmakyU2WmykyVmSozVWaqzFSZqTJTZabKTJWZKjNVZqrMVJmpOjQz8wERbgOXb1hutAAAAABJRU5ErkJggg=="/>
+    </pattern>
+  </defs>
+  <rect id="Rectangle_38" data-name="Rectangle 38" width="68" height="77" fill="url(#pattern)"/>
+  <g id="Group_74" data-name="Group 74" transform="translate(0.006 0.001)">
+    <path id="Path_55" data-name="Path 55" d="M306,433.842l-33-18.681V377.83l33-18.681,33,18.681v37.331l-33,18.681m0,1.148,34-19.247v-38.5L306,358l-34,19.246v38.5l34,19.247Z" transform="translate(-271.999 -358.001)" fill="#202022"/>
+  </g>
+  <g id="Group_76" data-name="Group 76" transform="translate(13.999 38.942)">
+    <g id="Group_75" data-name="Group 75">
+      <path id="Path_56" data-name="Path 56" d="M326,397.5l-.6-.556L286.641,397v1h38.817Z" transform="translate(-286.641 -396.942)" fill="#202022" fill-rule="evenodd"/>
+    </g>
+  </g>
+  <g id="Group_78" data-name="Group 78" transform="translate(43.221 30.109)">
+    <g id="Group_77" data-name="Group 77">
+      <path id="Path_57" data-name="Path 57" d="M296.071,397.887l.708-.706-9.071-9.072-.708.707,9.071,9.071Zm-8.363,9,9.071-9.072-.708-.705L287,406.179l.708.708Z" transform="translate(-287 -388.109)" fill="#202022"/>
+    </g>
+  </g>
+</svg>

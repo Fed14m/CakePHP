@@ -1,0 +1,80 @@
+.contacthero-container-bg {
+  background-color: black;
+}
+
+.contacthero-container {
+  background-color: black;
+  color: white;
+
+  padding: 190px 135px 20px;
+  @media (max-width: $xlg) {
+    padding: 125px 95px 20px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 135px 50px 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 115px 27px 20px;
+  }
+
+  .address-wrap {
+    margin-top: 45px;
+
+    @media (max-width: $xlg) {
+      margin-top: 15px;
+    }
+
+    h3 {
+      text-decoration: underline;
+      margin-bottom: 13px;
+      @media (max-width: $xlg) {
+        font-size: 1.15em;
+      }
+    }
+    .address-line {
+      margin-bottom: 7px;
+      @media (max-width: $xlg) {
+        font-size: 0.85em;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .bat-logo-white {
+    width: 100%;
+    margin-top: 5vh;
+  }
+}
+
+.maponly-container-bg {
+  background-image: url("../images/contact-us/map-5-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: white;
+
+  @include media-breakpoint-down(md) {
+    background-image: url("../images/contact-us/map-5-2-mobile.jpg");
+  }
+}
+
+.maponly-container {
+  background-color: transparent;
+
+  /*color: black;
+
+  padding: 115px 65px 20px;
+  @include media-breakpoint-down(md) {
+    padding: 135px 50px 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 35px 27px 20px;
+  }
+
+  .bats-map {
+    max-width: 100%;
+    margin-bottom: 13vh;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+  }*/
+}

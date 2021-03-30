@@ -1,0 +1,209 @@
+.abouthero-container {
+  background-image: url("../images/about/hero-bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: white;
+
+  padding-top: 10vh;
+
+  //Scroll snapping for page wise flip
+  //scroll-snap-align: start;
+
+  @media (max-width: $xlg) {
+    scroll-snap-align: none;
+    margin-top: 35px;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-image: url("../images/about/hero-bg-mob.jpg");
+    //padding-right: 135px;
+    height: auto !important;
+    margin-top: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 27px;
+    padding-right: 27px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 5vh;
+  }
+
+  h1 {
+    margin-top: 2vmin;
+    @media (max-width: $xlg) {
+      margin-top: -3vh;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 3vmin;
+    }
+  }
+
+  .hero-bat {
+    width: 93%;
+    max-width: 572px;
+    margin-top: 9vmin;
+    @media (max-width: $xlg) {
+      margin-top: 5vmin;
+    }
+    @include media-breakpoint-down(md) {
+      display: block;
+      margin: 9vmin auto;
+    }
+  }
+
+  .scroll-window {
+    width: 97% !important;
+    @media (max-width: $xlg) {
+      height: 335px !important;
+    }
+    @include media-breakpoint-down(md) {
+      width: 92% !important;
+    }
+    p {
+      margin-right: 30px;
+    }
+  }
+}
+
+.mission-container-bg {
+  background-color: black;
+}
+.mission-container {
+  @include containerMarginPadding();
+
+  background-color: black;
+  color: white;
+
+  padding-right: 0 !important;
+  @include media-breakpoint-down(sm) {
+    padding-right: 25px !important;
+  }
+
+  .slider {
+    height: 100%;
+  }
+
+  .abt-slide {
+    padding-right: 35vmin;
+    padding-left: 2vmin;
+    @include media-breakpoint-down(lg) {
+      padding-right: 23vmin;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-right: 10px;
+    }
+    .slide-ctr {
+      font-family: "Montserrat-SemiBold";
+      font-size: 0.8em;
+      margin-top: 18vmin;
+      @media (max-width: $xlg) {
+        margin-top: 20vmin;
+      }
+    }
+    h1 {
+      margin-top: 1.5vmin;
+    }
+  }
+
+  a {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-width: 68px;
+    min-height: 77px;
+    top: 50vmin !important;
+
+    @media (max-width: $xlg) {
+      top: 65vmin !important;
+    }
+    @include media-breakpoint-down(md) {
+      top: 60vh !important;
+    }
+    @include media-breakpoint-down(sm) {
+      top: 150vmin !important;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &.previousButton, &.nextButton {
+      transition: all .1s linear;
+    }
+
+    &.previousButton {
+      background-image: url("../images/slider-left-arrow.png");
+      left: 2vmin;
+
+      @include media-breakpoint-down(md) {
+
+      }
+    }
+    &.nextButton {
+      background-image: url("../images/slider-right-arrow.png");
+      right: inherit;
+      left: 12vmin;
+      @media (max-width: $xlg) {
+        left: 17vmin;
+      }
+      @include media-breakpoint-down(sm) {
+        left: 25vmin;
+      }
+      @include media-breakpoint-down(md) {
+
+      }
+    }
+  }
+
+  .partial-slide {
+    position: absolute;
+    opacity: .3;
+    left: 55vmax;
+    top: 0vh;
+    min-width: 80%;
+    @media (max-width: $xlg) {
+      left: 65vmax;
+    }
+  }
+
+}
+
+.about-testimonial-bg {
+  background-color: black;
+}
+.about-testimonial {
+  background-color: black;
+  color: white;
+
+  .slider {
+    background-image: url("../images/about/testimonial-bg.jpg");
+    @include media-breakpoint-down(md) {
+      background-image: none;
+    }
+    a {
+      &.previousButton {
+        background-image: url("../images/about/left-arrow-transparent.png");
+      }
+      &.nextButton {
+        background-image: url("../images/about/right-arrow-transparent.png");
+      }
+    }
+    .feedback {
+      @media (max-width: 1050px) {
+        width: 75%;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+    .feedback-by {
+      @media (max-width: 1050px) {
+        margin-top: 9vh !important;
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: 2vh !important;
+      }
+    }
+  }
+}

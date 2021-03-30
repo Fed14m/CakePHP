@@ -1,0 +1,968 @@
+
+//---Standard definitions
+.hm-container {
+  background-image: url("../images/hm-hero-bg-wide.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: white;
+
+  padding-top: 150px;
+  padding-left: 135px;
+
+  //Hide overflow for parallax effect
+  overflow: hidden;
+
+  @media (max-width: $xlg) {
+    margin-top: 35px;
+    padding-top: 120px;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-image: url("../images/hm-hero-bg-mob.jpg");
+    padding-right: 135px;
+    height: auto !important;
+    margin-top: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 27px;
+    padding-right: 27px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  h1 {
+    font-size: 4em;
+    @media (max-width: $xlg) {
+      font-size: 3.3em;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 2.5em;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 2.2em;
+    }
+  }
+
+  p {
+    font-size: 1.5em;
+    @media (max-width: $xlg) {
+      font-size: 1.2em;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1em;
+    }
+  }
+
+  .batwing-wrapper {
+    //border: 1px solid red;
+    @include media-breakpoint-down(lg) {
+      //margin-top: 7vh;
+    }
+    img {
+      width: 100%;
+      max-width: 716px;
+      margin-top: 2%;
+      //margin-left: -40px;
+      &.mobile-batwings {
+        width: 95%;
+        max-width: 373px;
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+        @include media-breakpoint-down(sm) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        margin: 45px auto;
+      }
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .bat-vid-gid-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    //border: 1px solid yellow;
+  }
+
+  .batwing-vid-wrapper {
+    position: absolute;
+    //Positioning
+    top: 15%;
+    height: 70.5%;
+    left: 16.2%;
+    width: 68.2%;
+
+    //border: 1px solid green;
+    overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+      top: 18.8%;
+      height: 60.8%;
+      left: 16.2%;
+      width: 67.7%;
+    }
+
+    @media (max-width: 940px) {
+      top: 20.8%;
+      height: 56.8%;
+      left: 16.2%;
+      width: 67.7%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 24.3%;
+      height: 63.5%;
+      left: 21.7%;
+      width: 56.3%;
+    }
+
+    .play-video, .pause-video {
+      max-width: 99px;
+      width: 30%;
+      cursor: pointer;
+      display: block;
+
+      //Positioning
+      position: absolute;
+      left:0;
+      right:0;
+      margin-left:auto;
+      margin-right:auto;
+      top: 39%;
+      @include media-breakpoint-down(md) {
+        top: 29%;
+      }
+
+      //Animation
+      @include playPauseButtonAnim()
+
+    }
+
+    .pause-video {
+      display: none;
+    }
+
+    .vid-stoppable {
+      display: block;
+      //Animation
+      @include playPauseButtonAnim()
+    }
+  }
+}
+
+.hm-text-h-block {
+  max-width: 500px;
+  margin-top: 115px;
+  @media (max-width: $xlg) {
+    margin-top: 25px;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-top: 30px;
+  }
+  @include media-breakpoint-down(md) {
+    margin: 0 auto;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 0 auto 75px;
+  }
+}
+
+.hm-slider-1, .stats-container {
+  background-color: black;
+  padding: 0;
+
+  @include media-breakpoint-down(sm) {
+    min-height: 1000px;
+    //margin-top: 65px;
+  }
+}
+
+.stats-container-bg {
+  background-color: black;
+}
+
+.stats-container {
+  color: white;
+  min-height: 700px;
+
+  @include media-breakpoint-down(md) {
+    height: auto !important;
+    min-height: auto;
+  }
+
+  div {
+    height: 100%;
+  }
+
+  .row:nth-child(1) {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .row:nth-child(2) {
+    display: none;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+
+    div {
+      //Else marging on child not working
+      overflow: auto;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .white-bat {
+      margin: 75px auto 0;
+    }
+
+    .mobile-stat {
+      background-image: url("../images/hm-stats/mobile-stat-area.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      max-width: 283px;
+      width: 97%;
+      max-height: 330px;
+      margin: 0 auto;
+
+      text-align: center;
+
+      img {
+        width: 15%;
+        margin-top: 75px;
+
+      }
+      h2 {
+        font-family: "Montserrat-Bold";
+        font-size: 3.1875em;
+        margin-top: 10px;
+      }
+      p {
+        font-family: "Montserrat-Medium";
+        font-size: 0.78125em;
+        margin-top: 10px;
+        margin-bottom: 100px;
+      }
+      &.mob-stat-2 {
+        margin-bottom: 75px;
+      }
+    }
+
+  }
+
+  .left-hex {
+    background-image: url("../images/hm-stats/left-area.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .right-hex {
+    background-image: url("../images/hm-stats/right-area.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+  }
+  .stems {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 104px;
+    @media (max-width: $xlg) {
+      width: 89%;
+    }
+    @include media-breakpoint-down(lg) {
+      width: 89%;
+    }
+    &.divider {
+      max-width: 1px;
+      height: 70%;
+    }
+    &.right-stem  {
+      right: 0;
+    }
+    &.white-bat {
+      bottom: 70%;
+      left: -59.4%;
+      width: 119%;
+      max-width: none;
+    }
+  }
+  .stats-block-leftcol {
+    padding-right: 2.5%;
+  }
+  .stats-block-rightcol {
+    padding-left: 2.5%;
+  }
+  .stats-block {
+    text-align: center;
+    img {
+      margin: 37vh auto 0;
+      display: block;
+      width: auto;
+      @media (max-width: $xlg) {
+        width: 15%;
+      }
+    }
+    h2 {
+      font-family: "Montserrat-Bold";
+      font-size: 5em;
+      margin-top: 20px;
+      @media (max-width: $xlg) {
+        font-size: 3.5625em;
+      }
+    }
+    p {
+      font-family: "Montserrat-Medium";
+      font-size: 20px;
+      margin-top: 15px;
+      @media (max-width: $xlg) {
+        font-size: 1em;
+        margin-top: 11px;
+      }
+    }
+  }
+}
+
+.offerings-container-bg {
+  background-color: $siteWhite;
+}
+
+.offerings-container {
+  scroll-snap-align: center;
+
+  //Margins and paddings
+  padding: 125px 135px 0;
+  @media (max-width: $xlg) {
+    padding: 95px 95px 0;
+  }
+
+  @media (max-width: $xlg) {
+    scroll-snap-align: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: 65px;
+    padding: 45px 30px;
+    height: auto !important;
+    min-height: auto;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 25px 25px;
+  }
+  h1 {
+    margin-bottom: 45px;
+    @media (max-width: $xlg) {
+      margin-bottom: 35px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 35px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 25px;
+    }
+  }
+  p {
+    color: $hamburgerBlack;
+    padding-left: 2px;
+    margin-top: 65px;
+    @media (max-width: $xlg) {
+      margin-top: 55px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 0.875em;
+    }
+  }
+
+  .desc-wrap, .us-wrap, .them-wrap {
+    background-color: white;
+    @include box-shadow($graySiteBg 5px 14px 16px);
+  }
+
+  .desc-wrap {
+    border-radius: 13px;
+    border-bottom-right-radius: 0;
+    margin-top: 19.5px;
+  }
+
+  .us-wrap {
+    text-align: center;
+    border-radius: 13px;
+    .o-cell {
+      font-family: "Montserrat";
+    }
+    .o-head{
+      background-color: $usBlue;
+      border-color: $siteWhite;
+      padding-top: 44px;
+      font-family: "Montserrat-Bold";
+      @media (max-width: $xlg) {
+        padding-top: 34px;
+      }
+      @media (max-width: 1050px) {
+        padding-top: 34px;
+        padding-bottom: 37px;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 15px 42px;
+      }
+    }
+    .left-last-cell {
+      border-bottom-right-radius: 13px;
+      padding-bottom: 44px;
+      @media (max-width: $xlg) {
+        padding-bottom: 34px;
+      }
+      @media (max-width: 1050px) {
+        padding-bottom: 54px;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 15px 20px;
+      }
+    }
+  }
+
+  .them-wrap {
+    text-align: center;
+    border-radius: 13px;
+    border-bottom-left-radius: 0;
+    margin-top: 19.5px;
+    @include media-breakpoint-down(md) {
+      border-bottom-left-radius: 13px;
+    }
+    .o-cell {
+      font-family: "Montserrat";
+    }
+    .o-head{
+      font-family: "Montserrat-Bold";
+    }
+    .left-last-cell {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 13px;
+      @include media-breakpoint-down(md) {
+        border-bottom-left-radius: 13px;
+      }
+    }
+  }
+
+  .o-cell {
+    padding: 25px 52px;
+    border: 1px solid $borderGray;
+    font-family: "Montserrat-SemiBold";
+    color: $hamburgerBlack;
+    font-size: 1em;
+    @media (max-width: $xlg) {
+      padding: 15px 42px;
+      font-size: 0.8em;
+    }
+
+    @media (max-width: 1050px) {
+      padding: 15px 20px;
+      font-size: 0.8em;
+      min-height: 75px;
+    }
+
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+    }
+  }
+
+  .o-head {
+    background-color: $hamburgerBlack;
+    color: white;
+    border-color: $hamburgerBlack;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    padding-left: 50px;
+    font-family: "Montserrat-Bold";
+    font-size: 1.25em;
+    @media (max-width: $xlg) {
+      padding: 15px 42px;
+      font-size: 0.9em;
+    }
+  }
+
+  .left-last-cell {
+    border-bottom-left-radius: 13px;
+  }
+
+  .semi-b {
+    font-family: "Montserrat-SemiBold";
+  }
+
+  .feat-available {
+    font-family: "Montserrat";
+    @include media-breakpoint-down(md) {
+      font-family: "Montserrat-SemiBold";
+    }
+  }
+}
+
+.all-in-one {
+  background-color: white;
+  @include containerMarginPadding();
+
+  //Custom padding margin
+  padding: 140px 65px 35px 125px;
+  @media (max-width: $xlg) {
+    padding-top: 75px;
+    padding-right: 25px;
+    padding-bottom: 75px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 65px;
+  }
+
+  .expand-icon {
+    height: auto;
+    cursor: pointer;
+    float: right;
+  }
+  .collapse-icon {
+    height: 0;
+    cursor: pointer;
+    float: right;
+  }
+
+  .feature-wrap {
+    margin-top: 35px;
+    h1 {
+      margin-bottom: 5vh;
+    }
+
+    h3 {
+      margin-bottom: 15px;
+      padding-left: 15px;
+      @media (max-width: $xlg) {
+        font-size: 1em;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-left: 23px;
+        padding-right: 15px;
+      }
+    }
+
+    p {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.1s ease;
+      max-height: 0;
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-left: 15px;
+      @media (max-width: $xlg) {
+        font-size: 0.8em;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-left: 23px;
+        padding-right: 15px;
+      }
+    }
+
+    .feature-image-mobile {
+      display: none;
+    }
+
+    .feature-block {
+      border: 1px solid $border-color;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+
+      padding-top: 30px;
+
+      &:nth-child(2) {
+        border-top: 1px solid $border-color;
+      }
+    }
+  }
+  .expanded {
+    p {
+      height: auto;
+      overflow: auto;
+      max-height: 30vh;
+    }
+
+    .feature-image-mobile {
+      display: block;
+      width: 97%;
+      max-width:365px;
+      margin: 0 auto;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 15px;
+      }
+    }
+
+    h3 {
+      color: $siteBlue;
+    }
+
+    .expand-icon {
+      height: 0;
+    }
+    .collapse-icon {
+      height: auto;
+    }
+  }
+
+  .feature-image-wide {
+    width: 95%;
+    max-width: 563px;
+  }
+}
+
+.crmup-container-bg {
+  background-color: black;
+}
+.crmup-container {
+  background-color: black;
+  color: $white;
+
+  @include containerMarginPadding();
+
+  //Custom padding/margin
+  padding: 100px 135px 20px;
+  @media (max-width: $xlg) {
+    padding: 125px 95px 45px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    padding: 75px 15px 20px;
+  }
+
+  p {
+    @include media-breakpoint-down(sm) {
+      font-size: 0.8em;
+    }
+  }
+
+  .crm-tab {
+    display: block;
+    width: 100%;
+    max-width: 487px;
+    margin: 5vh auto;
+    @include media-breakpoint-down(md) {
+      max-width: 275px;
+      width: 95%;
+    }
+  }
+
+  .t-1 {
+    margin-top: 8.7vh !important;
+  }
+
+  .crm-text {
+    margin-top: 4.2vh;
+    min-height: 6vh;
+    @media (max-width: $xlg) {
+      font-size: 0.8em;
+      margin-top: 7.5vh;
+    }
+
+    @media (max-width: 1400px) {
+      margin-top: 7.3vh;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 0.7em;
+      margin-top: 3.3vh;
+    }
+  }
+
+  .list-wrapper {
+    font-family: "Montserrat";
+    max-width: 500px;
+    width: 95%;
+    margin: 35px auto 25px;
+    @include media-breakpoint-down(sm) {
+      font-size: 0.8em;
+      max-width: 315px;
+    }
+    .list-num {
+      margin-bottom: 15px;
+      background-color: $siteBlue;
+      width: 27px;
+      height: 27px;
+      border-radius: 13.5px;
+      padding-top: 2px;
+      padding-left: 1px;
+      @include media-breakpoint-down(sm) {
+        padding-top: 4px;
+        padding-left: 2px;
+      }
+    }
+  }
+
+}
+
+.testimonial-container-bg {
+  background-color: $graySiteBg-2;
+  //Cannot change to white as the bg of the slide
+  //is not white and it contains icons we need
+  //background-color: white;
+
+  @include media-breakpoint-down(md) {
+    background-color: white;
+  }
+}
+
+.testimonial-container {
+  background-color: $graySiteBg-2;
+  @include containerMarginPadding();
+
+  padding: 175px 135px 65px;
+
+  @media (max-width: $xlg) {
+    padding: 75px 95px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-color: white;
+    padding: 75px 15px 0;
+  }
+
+  .slider {
+    background-image: url("../images/hm-testimonial/wide-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    @include media-breakpoint-down(md) {
+      background-image: url("../images/hm-testimonial/mob-bg.jpg");
+    }
+    .testimonial-wrapper {
+      padding-left: 50px;
+      @include media-breakpoint-down(sm) {
+        padding-left: 25px;
+      }
+      .bat-logo {
+        margin-top: 10vh;
+        max-width: 85px;
+      }
+      .testimonial-head {
+        margin-top: 11.25vh;
+        font-size: 1.3em;
+        @media (max-width: $xlg) {
+          margin-top: 11.5vmin;
+          margin-left: 25px;
+        }
+        @include media-breakpoint-down(lg) {
+          margin-top: 11.5vmin;
+          margin-left: 35px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-top: 14.5vmin;
+          margin-left: 0;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-top: 5vmin;
+          margin-left: 0;
+          font-size: 1em;
+        }
+      }
+      .feedback-star {
+        margin-top: 7vh;
+        margin-right: 15px;
+        @include media-breakpoint-down(sm) {
+          font-size: 1.25em;
+          max-width: 30px;
+          margin-top: 2vh;
+        }
+      }
+      .feedback {
+        font-family: "Montserrat-SemiBold";
+        font-size: 2.5em;
+        margin-top: 5vh;
+        position: relative;
+        min-height: 75px;
+        @include media-breakpoint-down(md) {
+          font-size: 2.1em;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 1.25em;
+        }
+        div {
+          position: inherit;
+          z-index: 50;
+          margin-right: 95px;
+          @include media-breakpoint-down(sm) {
+            margin-right: 25px;
+          }
+        }
+      }
+      .quote {
+        position: absolute;
+        top: -21px;
+        left: -50px;
+        @include media-breakpoint-down(sm) {
+          max-width: 36px;
+          left: -5vw;
+          top: -3vw;
+        }
+      }
+      .feedback-by {
+        font-family: "Montserrat-Medium";
+        font-size: 1.5em;
+        margin-top: 2vh;
+        @include media-breakpoint-down(sm) {
+          font-size: 1em;
+        }
+      }
+    }
+    a {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-width: 68px;
+      min-height: 77px;
+      top: 0;
+      right: 20px;
+      left: inherit;
+
+      @include media-breakpoint-down(md) {
+        right: inherit;
+        left: 6vw;
+      }
+      @include media-breakpoint-down(sm) {
+        min-width: 50px;
+        left: 2vh;
+      }
+
+      svg {
+        display: none;
+      }
+      &.previousButton {
+        background-image: url("../images/hm-testimonial/left-arrow-transp.png");
+        top: 29vh;
+        @include media-breakpoint-down(md) {
+          top: 55vh;
+        }
+        @media (max-width: 400px) {
+          top: 115vmin;
+        }
+      }
+      &.nextButton {
+        background-image: url("../images/hm-testimonial/right-arrow-transp.png");
+        top: 42vh;
+        @include media-breakpoint-down(md) {
+          top: 55vh;
+          left: 20vw
+        }
+        @media (max-width: 400px) {
+          top: 115vmin;
+        }
+      }
+    }
+
+  }
+}
+
+.video-testimonial {
+  background-color: white;
+  color: black;
+  .br-slider-viewport {
+    color: black;
+    .br-slide-wrapper {
+      .br-slide {
+        img.active-outline {
+          max-width: 279px;
+          @media (max-width: $xlg) {
+            width: 82.3%;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 92.7%;
+          }
+        }
+      }
+      .active-slide-vid {
+        //border: 1px solid red;
+        border-radius: 0;
+        height: 79%;
+        top: 10%;
+        width: 67.5%;
+        @media (max-width: $xlg) {
+          width: 70%;
+        }
+        @include media-breakpoint-down(lg) {
+          width: 69%;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 78.5%;
+          left: 27px;
+        }
+        .pulsating-play {
+          border: 3px solid white;
+          height: 60px;
+          width: 60px;
+          border-radius: 30px;
+
+          //--Centering
+          position: absolute;
+          margin: auto;
+          top: 0; left: 0; bottom: 0; right: 0;
+
+          //Animation
+          animation-name: pulsatePlayButton;
+          animation-iteration-count: infinite;
+          animation-duration: 1.5s;
+        }
+      }
+    }
+  }
+}
+
+//Common classes shared by other home modules
+.event-trapper {
+  position: absolute;
+  top:0;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes pulsatePlayButton {
+  0% {transform: scale(1);}
+  5% {transform: scale(1.1); opacity: 0.95;}
+  10% {transform: scale(1.15);}
+  15% {transform: scale(1.2); opacity: 0.9;}
+  20% {transform: scale(1.25);}
+  25% {transform: scale(1.3); opacity: 0.85;}
+  30% {transform: scale(1.35);}
+  35% {transform: scale(1.4); opacity: 0.8;}
+  40% {transform: scale(1.45);}
+  45% {transform: scale(1.5); opacity: 0.75;}
+  50% {transform: scale(1.6);}
+  55% {transform: scale(1.7); opacity: 0.7;}
+  60% {transform: scale(1.8); opacity: 0.6;}
+  65% {transform: scale(1.9); opacity: 0.55;}
+  70% {transform: scale(2); opacity: 0.5;}
+  73% {transform: scale(2.1); opacity: 0.45;}
+  75% {transform: scale(2.3); opacity: 0.3;}
+  78% {transform: scale(2.5); opacity: 0.2;}
+  80% {transform: scale(2.7); opacity: 0.1;}
+  83% {transform: scale(2.4); opacity: 0;}
+  85% {transform: scale(2.4); opacity: 0;}
+  88% {transform: scale(2.4); opacity: 0;}
+  90% {transform: scale(2.4); opacity: 0;}
+  93% {transform: scale(2.4); opacity: 0;}
+  95% {transform: scale(2.4); opacity: 0;}
+  98% {transform: scale(2.4); opacity: 0;}
+  100% {transform: scale(1); opacity: 1;}
+}

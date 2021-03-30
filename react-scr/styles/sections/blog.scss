@@ -1,0 +1,123 @@
+.blog-list-container-bg {
+  background-color: white;
+  scroll-snap-align: none;
+}
+
+.blog-list-container {
+  background-color: white;
+
+  padding-top: 150px;
+  padding-bottom: 75px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 85px;
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    margin-bottom: 85px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .blog-item-wrapper {
+    max-width: 375px;
+    min-height: 500px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    border: 2px solid $gray300;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    @include box-shadow($gray300 3px 25px 21px);
+
+    @media (max-width: $xlg) {
+      width: 90%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 97%;
+    }
+
+    .blog-img {
+      width: 100%;
+    }
+
+    .text-section {
+      padding: 30px 30px;
+      p {
+        margin-top: 17px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 83%;
+        margin-bottom: 25px;
+        .date, .read-more {
+          display: inline-block;
+          font-size: 0.875em;
+        }
+        .date {
+          color: $gray500;
+          padding-left: 13px;
+        }
+        .read-more {
+          float: right;
+          padding-top: 2px;
+          a {
+            text-decoration: none;
+            color: $siteBlue;
+          }
+        }
+      }
+
+    }
+  }
+
+  .load-more {
+    background-color: white;
+    border: 1px solid $siteBlue;
+    color: $siteBlue;
+    font-family: "Montserrat-SemiBold";
+    padding: 20px 50px;
+    border-radius: 5px;
+  }
+}
+
+.blog-details-container {
+  img {
+    max-width: 100%;
+  }
+  .details-pg-date {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    margin: 25px auto 10px;
+    padding: 5px 15px;
+    font-family: "Montserrat-Medium";
+  }
+  .blog-p {
+    padding: 50px 150px;
+    @media (max-width: $xlg) {
+      padding: 50px 2%;
+    }
+  }
+
+  h2 {
+    font-family: "Montserrat-Bold";
+  }
+
+  ul {
+    li {
+      margin-top: 20px;
+    }
+  }
+}
+
